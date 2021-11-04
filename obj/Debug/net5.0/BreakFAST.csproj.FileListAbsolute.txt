@@ -1,0 +1,16 @@
+C:\Users\F3T1W\source\repos\BreakFAST\bin\Debug\net5.0\BreakFAST.exe
+C:\Users\F3T1W\source\repos\BreakFAST\bin\Debug\net5.0\BreakFAST.deps.json
+C:\Users\F3T1W\source\repos\BreakFAST\bin\Debug\net5.0\BreakFAST.runtimeconfig.json
+C:\Users\F3T1W\source\repos\BreakFAST\bin\Debug\net5.0\BreakFAST.runtimeconfig.dev.json
+C:\Users\F3T1W\source\repos\BreakFAST\bin\Debug\net5.0\BreakFAST.dll
+C:\Users\F3T1W\source\repos\BreakFAST\bin\Debug\net5.0\ref\BreakFAST.dll
+C:\Users\F3T1W\source\repos\BreakFAST\bin\Debug\net5.0\BreakFAST.pdb
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\BreakFAST.csproj.AssemblyReference.cache
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\BreakFAST.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\BreakFAST.AssemblyInfoInputs.cache
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\BreakFAST.AssemblyInfo.cs
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\BreakFAST.csproj.CoreCompileInputs.cache
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\BreakFAST.dll
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\ref\BreakFAST.dll
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\BreakFAST.pdb
+C:\Users\F3T1W\source\repos\BreakFAST\obj\Debug\net5.0\BreakFAST.genruntimeconfig.cache

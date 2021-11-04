@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "BreakFAST/1.0.0": {
+        "runtime": {
+          "BreakFAST.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BreakFAST/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
