@@ -6,12 +6,12 @@ namespace BreakFAST
     class Program
     {
         
-        static async Task Main()
+        static void Main()
         {
-            await (MakeBreakfastAsync());
+             MakeBreakfastAsync();
         }
 
-        public static async Task<string> MakeBreakfastAsync()
+        public static void MakeBreakfastAsync()
         {
             Console.WriteLine("Start to cook breakfast!");
 
@@ -19,33 +19,25 @@ namespace BreakFAST
 
             var fryingBread = FryBreadSlicesAsync(2);
 
-            var cuttedMushroom = CutMushroom(5);
+            CutMushroom(5);
 
-            var friedMushroom = await FryMushroomAsync();
+            var friedMushroom =  FryMushroomAsync();
 
-            var friedEggs = await fryingEggs;
-
-            var friedBread = await fryingBread;
-
-            var breakfast = "Breakfast ready! Have a nice meal";
+            Task.WaitAll(fryingEggs, fryingBread, friedMushroom);
 
             Console.WriteLine("Breakfast ready! Have a nice meal");
-
-            return breakfast;
         }
 
-        public static async Task<string> FryEggsAsync(int x)
+        public static async Task FryEggsAsync(int x)
         {
             Console.WriteLine("Frying eggs");
 
             await Task.Delay(1000);
 
             Console.WriteLine($"{x} fried eggs");
-
-            return $"{x} fried eggs";
         }
 
-        public static string CutMushroom(int x)
+        public static void CutMushroom(int x)
         {
             Console.WriteLine("Cutting mushrooms");
 
@@ -53,30 +45,24 @@ namespace BreakFAST
 
             Console.WriteLine($"{x} cutted mushrooms");
 
-            return $"{x} cutted mushrooms";
         }
 
-        public static async Task<string> FryMushroomAsync()
+        public static async Task FryMushroomAsync()
         {
             Console.WriteLine($"Frying cutted mushrooms");
 
             await Task.Delay(3000);
 
             Console.WriteLine("Mushrooms fried");
-
-            return $"Mushrooms fried";
-
         }
 
-        public static async Task<string> FryBreadSlicesAsync(int x)
+        public static async Task FryBreadSlicesAsync(int x)
         {
             Console.WriteLine("Toasting bread");
 
             await Task.Delay(2000);
 
             Console.WriteLine($"{x} slices of bread fried");
-
-            return $"{x} slices of bread fried";
         }
     }
 }
