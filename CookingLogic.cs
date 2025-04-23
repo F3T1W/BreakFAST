@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BreakFAST
 {
-    class AsyncMethods
+    internal static class AsyncMethods
     {
         public static void MakeBreakfastAsync()
         {
@@ -25,7 +22,7 @@ namespace BreakFAST
             Console.WriteLine("Breakfast ready! Have a nice meal");
         }
 
-        public static async Task FryEggsAsync(int x)
+        private static async Task FryEggsAsync(int x)
         {
             Console.WriteLine("Frying eggs");
 
@@ -34,7 +31,7 @@ namespace BreakFAST
             Console.WriteLine($"{x} fried eggs");
         }
 
-        public static void CutMushroom(int x)
+        private static void CutMushroom(int x)
         {
             Console.WriteLine("Cutting mushrooms");
 
@@ -44,7 +41,7 @@ namespace BreakFAST
 
         }
 
-        public static async Task FryMushroomAsync()
+        private static async Task FryMushroomAsync()
         {
             Console.WriteLine($"Frying cutted mushrooms");
 
@@ -53,7 +50,7 @@ namespace BreakFAST
             Console.WriteLine("Mushrooms fried");
         }
 
-        public static async Task FryBreadSlicesAsync(int x)
+        private static async Task FryBreadSlicesAsync(int x)
         {
             Console.WriteLine("Toasting bread");
 
