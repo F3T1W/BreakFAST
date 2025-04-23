@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace BreakFAST
 {
-    internal static class AsyncMethods
+    internal static class CookingLogic
     {
         public static void MakeBreakfastAsync()
         {
@@ -37,7 +37,7 @@ namespace BreakFAST
 
             Task.Delay(500).GetAwaiter().GetResult();
 
-            Console.WriteLine($"{x} cutted mushrooms");
+            Console.WriteLine($"{x} cutted out mushrooms");
 
         }
 
@@ -60,4 +60,3 @@ namespace BreakFAST
         }
     }
 }
-

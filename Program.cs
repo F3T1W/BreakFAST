@@ -1,17 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace BreakFAST
+﻿namespace BreakFAST
 {
-    class Program
+    internal static class Program
     {
-
-        static void Main()
+        private static void Main()
         {
-            AsyncMethods.MakeBreakfastAsync();
+            CookingLogic.MakeBreakfastAsync();
         }
-
     }
 }
-
-        
