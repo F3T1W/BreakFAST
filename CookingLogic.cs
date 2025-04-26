@@ -1,62 +1,59 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace BreakFAST
+namespace BreakFAST;
+
+internal static class CookingLogic
 {
-    internal static class CookingLogic
+    public static void MakeBreakfastAsync()
     {
-        public static void MakeBreakfastAsync()
-        {
-            Console.WriteLine("Start to cook breakfast!");
+        Console.WriteLine("Start to cook breakfast!");
 
-            var fryingEggs = FryEggsAsync(2);
+        Task fryingEggs = FryEggsAsync(2);
+        Task fryingBread = FryBreadSlicesAsync(2);
 
-            var fryingBread = FryBreadSlicesAsync(2);
+        CutMushroom(5);
 
-            CutMushroom(5);
+        Task friedMushroom = FryMushroomAsync();
 
-            var friedMushroom = FryMushroomAsync();
+        Task.WaitAll(fryingEggs, fryingBread, friedMushroom);
 
-            Task.WaitAll(fryingEggs, fryingBread, friedMushroom);
+        Console.WriteLine("Breakfast ready! Have a nice meal");
+    }
 
-            Console.WriteLine("Breakfast ready! Have a nice meal");
-        }
+    private static async Task FryEggsAsync(int x)
+    {
+        Console.WriteLine("Frying eggs");
 
-        private static async Task FryEggsAsync(int x)
-        {
-            Console.WriteLine("Frying eggs");
+        await Task.Delay(1000);
 
-            await Task.Delay(1000);
+        Console.WriteLine($"{x} fried eggs");
+    }
 
-            Console.WriteLine($"{x} fried eggs");
-        }
+    private static void CutMushroom(int x)
+    {
+        Console.WriteLine("Cutting mushrooms");
 
-        private static void CutMushroom(int x)
-        {
-            Console.WriteLine("Cutting mushrooms");
+        Task.Delay(500).GetAwaiter().GetResult();
 
-            Task.Delay(500).GetAwaiter().GetResult();
+        Console.WriteLine($"{x} cutted out mushrooms");
+    }
 
-            Console.WriteLine($"{x} cutted out mushrooms");
+    private static async Task FryMushroomAsync()
+    {
+        Console.WriteLine($"Frying cutted mushrooms");
 
-        }
+        await Task.Delay(3000);
 
-        private static async Task FryMushroomAsync()
-        {
-            Console.WriteLine($"Frying cutted mushrooms");
+        Console.WriteLine("Mushrooms fried");
+    }
 
-            await Task.Delay(3000);
+    private static async Task FryBreadSlicesAsync(int x)
+    {
+        Console.WriteLine("Toasting bread");
 
-            Console.WriteLine("Mushrooms fried");
-        }
+        await Task.Delay(2000);
 
-        private static async Task FryBreadSlicesAsync(int x)
-        {
-            Console.WriteLine("Toasting bread");
-
-            await Task.Delay(2000);
-
-            Console.WriteLine($"{x} slices of bread fried");
-        }
+        Console.WriteLine($"{x} slices of bread fried");
     }
 }

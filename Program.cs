@@ -1,10 +1,6 @@
-﻿namespace BreakFAST
+﻿namespace BreakFAST;
+
+internal static class Program
 {
-    internal static class Program
-    {
-        private static void Main()
-        {
-            CookingLogic.MakeBreakfastAsync();
-        }
-    }
+    private static void Main() => CookingLogic.MakeBreakfastAsync();
 }
